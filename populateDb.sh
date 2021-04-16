@@ -30,4 +30,7 @@ docker exec -i snippetbox-mysql mysql -uroot -psnippetbox <<< "
       UTC_TIMESTAMP(),
       DATE_ADD(UTC_TIMESTAMP(), INTERVAL 7 DAY)
   );
+  CREATE USER 'web'@'localhost';
+  GRANT SELECT, INSERT, UPDATE ON snippetbox.* TO 'web'@'localhost';
+  ALTER USER 'web'@'localhost' IDENTIFIED BY 'snippetbox';
 "
