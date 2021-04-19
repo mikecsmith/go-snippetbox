@@ -1,4 +1,4 @@
-module github.com/mikecsmith/snippetbox
+module github.com/mikecsmith/go-snippetbox
 
 go 1.16
 
